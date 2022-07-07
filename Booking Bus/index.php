@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<?php 
+	require_once 'koneksi.php';
+?>
+<center><h1>BOOKING BUS</h1></center>
+<center>
+	<a class="button" href="?page=list">LIHAT DATA</a>
+	<a class="button" href="?page=add">TAMBAH DATA</a>
+</center>
+<hr>
+<?php 
+	$page = (isset($_GET['page'])) ? $_GET['page'] : 'add' ;
+
+	switch ($page) {
+		case 'add':
+			require_once 'add.php';
+			break;
+		case 'list':
+			require_once 'list.php';
+			break;
+		case 'edit':
+			require_once 'edit.php';
+			break;
+		case 'hapus':
+			require_once 'delete.php';
+			break;
+		case 'detail':
+			require_once 'detail.php';
+			break;
+		case 'koneksi':
+				require_once 'koneksi.php';
+				break;
+		default:
+			require_once 'add.php';
+			break;
+			case 'list':
+				require_once 'list.php';
+				break;
+			case 'edit':
+				require_once 'edit.php';
+				break;
+			case 'hapus':
+				require_once 'delete.php';
+				break;
+			case 'detail':
+				require_once 'detail.php';
+				break;
+			case 'koneksi':
+					require_once 'koneksi.php';
+					break;
+	}
+ ?>
+</body>
+</html>
